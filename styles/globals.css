@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #2d2d2d;
+  /* background-image: url("/moon-outline.svg"); */
+}
+
+input:checked ~ .toggle-bg {
+  background-color: #48bb78;
+}
+
+html,
+body,
+/* body > div:first-child, */
+div#__next,
+div#__next > div {
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@font-face {
+  font-family: "Jua", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+}
+
+/* :root {
+  @layer
+} */
+
+@layer base {
+  body {
+    @apply bg-primary;
+  }
+}
+
+html > body {
+  font-family: "Jua", sans-serif;
+}
+
+.light {
+  background-color: white;
+  color: black;
+  /* --color-bg-primary: white; */
+  /* --color-bg-primary: #2d3748; */
+  /* --color-bg-secondary: #edf;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5599;
+  --color-text-accent: #2b6cb0; */
+}
+
+.dark {
+  background-color: #2d3748;
+  color: #f7fafc !important;
+  /* --color-bg-primary: #2d3748; */
+  /* --color-bg-secondary: #283141;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #efa;
+  --color-text-accent: #81e6d9; */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url("../public/sun-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url("../public/moon-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
+/* .toggle {
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  margin: auto;
+  background-image: linear-gradient(aqua, skyblue);
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle.night {
+  background-image: linear-gradient(midnightblue, rebeccapurple);
+}
+
+.notch {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: yellow;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: 0 0 5px yellow;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.notch > .crater {
+  background: burlywood;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+}
+.night .crater {
+  opacity: 0.4;
+}
+
+.crater:first-child {
+  left: 5px;
+  top: 15px;
+  height: 5px;
+  width: 20px;
+  transform: rotate(-45deg);
+}
+
+.crater:last-child {
+  right: 10px;
+  top: 15px;
+  height: 7px;
+  width: 15px;
+  transform: rotate(45deg);
+}
+
+.night > .notch {
+  background: whitesmoke;
+  box-shadow: 0 0 5px whitesmoke;
+  transform: translate(30px, 0);
+}
+
+.shape {
+  position: absolute;
+  background: whitesmoke;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.shape.sm {
+  height: 5px;
+  width: 10px;
+  top: 50%;
+  left: 60%;
+}
+
+.shape.md {
+  height: 10px;
+  width: 15px;
+  top: 25%;
+  left: 45%;
+  z-index: 2;
+}
+
+.shape.lg {
+  height: 5px;
+  width: 30px;
+  bottom: 20px;
+  left: 45%;
+}
+
+.night .shape {
+  background: lightgray;
+  box-shadow: 0 0 10px 2px violet;
+}
+
+.night .shape.sm {
+  height: 5px;
+  width: 5px;
+  transform: translate(-10px, 0);
+}
+
+.night .shape.sm:first-of-type {
+  transform: translate(-30px, -10px);
+}
+
+.night .shape.md {
+  height: 3px;
+  width: 3px;
+  transform: translate(-15px, 0);
+}
+
+.night .shape.lg {
+  height: 5px;
+  width: 5px;
+  transform: translate(-10px, 0);
+} */
