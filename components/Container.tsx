@@ -3,8 +3,9 @@ import Head from "next/head";
 import metadata from "../data/metadata";
 import Nav from "./Nav";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
+import Utterances from "./utterances";
 
 const Container = (props) => {
   const router = useRouter();
@@ -20,22 +21,24 @@ const Container = (props) => {
   };
 
   return (
-    <div>
-      <div className={`w-full flex flex-col items-center`}>
+    // <div>
+    <Fragment>
+      <div className={`w-full flex flex-col items-center shadow-md h-16`}>
         <Head>
           <title>{meta.title}</title>
           <meta content={meta.description} name="description" />
           <meta property="og:site_name" content={meta.author} />
         </Head>
 
-        <header
+        {/* <header
           className={`absolute w-full flex flex-row justify-between items-center my-1 shadow-md h-16 `}
+        > */}
+        <header
+          className={`absolute w-full md:max-w-4xl max-w-[90%] flex items-center justify-between h-16`}
         >
-          <Link href={"/"} passHref>
+          <Link href={"/"} passHref className="">
             <a>
-              <div
-                className={`flex flex-row items-center ml-6 xl:ml-96 md:ml-44`}
-              >
+              <div className={` `}>
                 {/* <Image
                   src={`/logo.png`}
                   alt="로고"
@@ -59,11 +62,14 @@ const Container = (props) => {
         >
           {props.children}
         </main>
+        {check && <Utterances />}
+        <footer className="w-full relative text-center text-stone-500">
+          <p className="dark:text-white pt-10 pb-10">
+            © 2022. Unsung. All rights reserved.
+          </p>
+        </footer>
       </div>
-      <footer className="w-full h-24  grid items-center text-center text-stone-600">
-        <p className="dark:text-white">© 2022. Unsung. All rights reserved.</p>
-      </footer>
-    </div>
+    </Fragment>
   );
 };
 

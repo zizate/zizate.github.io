@@ -1,8 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { RecoilRoot } from "recoil";
+import { createContext } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+export const ThemeContext = createContext(null);
 
-export default MyApp
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  );
+};
+
+export default MyApp;

@@ -6,6 +6,9 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      maxWidth: {
+        "1/2": "90%",
+      },
       backgroundColor: {
         primary: "var(--color-bg-primary)",
         secondary: "var(--color-bg-secondary)",
