@@ -1,0 +1,103 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>Next js Blog 기본셋팅</title><meta content="Next github blog setting" name="description"/><meta property="og:site_name" content="unsung"/><meta name="next-head-count" content="5"/><link rel="preload" href="/_next/static/css/bce7e390193028df.css" as="style"/><link rel="stylesheet" href="/_next/static/css/bce7e390193028df.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-0d1b80a048d4787e.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-5f4595e5518b5600.js" defer=""></script><script src="/_next/static/chunks/main-28d3d97e7abc0c9b.js" defer=""></script><script src="/_next/static/chunks/pages/_app-618ab41612c2f83e.js" defer=""></script><script src="/_next/static/chunks/25-97f24c283a6d741c.js" defer=""></script><script src="/_next/static/chunks/pages/blog/%5Bslug%5D-0d1b0ece8be0d7ce.js" defer=""></script><script src="/_next/static/6mUgJyEhXQOh14c8myvlg/_buildManifest.js" defer=""></script><script src="/_next/static/6mUgJyEhXQOh14c8myvlg/_ssgManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><div class="w-full flex flex-col items-center shadow-md h-16"><header class="absolute w-full md:max-w-4xl max-w-[90%] flex items-center justify-between h-16"><a href="/"><div class=" "><span class="mx-2 font-sans font-black font text-lg">Unsung</span></div></a><nav class="flex items-center "><a class="text-gray-800 font-medium mr-4 text-xl px-3 py-2 rounded-md hover:text-blue-500 dark:text-white" href="/blog">Blog</a><div><label id="switch" class="switch"><input type="checkbox" checked="" id="slider"/><span class="slider round"></span></label></div></nav></header><main class="w-full md:max-w-3xl max-w-xs mt-16 dark:invert"><div class="mt-10 prose"><h1 class="text-sky-700">Next js Blog 기본셋팅</h1><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<hr/>
+<p>Paragraph
+text <code>Inline Code</code> text
+~~Mistaken text.~~
+<em>Italics</em>
+<strong>Bold</strong></p>
+<hr/>
+<p>Tasks</p>
+<ul>
+<li>[ ] a task list item</li>
+<li>[ ] list syntax required</li>
+<li>[ ] normal <strong>formatting</strong></li>
+<li>[ ] incomplete</li>
+<li>[x] completed</li>
+</ul>
+<hr/>
+<p>Code Blocks</p>
+<p>4 space indention
+makes full-width
+standard code blocks</p>
+<pre><code class="language-js">var now = new Date();
+
+var days = new Array(
+  &quot;Sunday&quot;,
+  &quot;Monday&quot;,
+  &quot;Tuesday&quot;,
+  &quot;Wednesday&quot;,
+  &quot;Thursday&quot;,
+  &quot;Friday&quot;,
+  &quot;Saturday&quot;
+);
+
+var months = new Array(
+  &quot;January&quot;,
+  &quot;February&quot;,
+  &quot;March&quot;,
+  &quot;April&quot;,
+  &quot;May&quot;,
+  &quot;June&quot;,
+  &quot;July&quot;,
+  &quot;August&quot;,
+  &quot;September&quot;,
+  &quot;October&quot;,
+  &quot;November&quot;,
+  &quot;December&quot;
+);
+
+var date = (now.getDate() &lt; 10 ? &quot;0&quot; : &quot;&quot;) + now.getDate();
+
+function fourdigits(number) {
+  return number &lt; 1000 ? number + 1900 : number;
+}
+today =
+  days[now.getDay()] +
+  &quot;, &quot; +
+  months[now.getMonth()] +
+  &quot; &quot; +
+  date +
+  &quot;, &quot; +
+  fourdigits(now.getYear());
+
+document.write(today);
+</code></pre>
+<pre><code class="language-css">#sc_drag_area {
+  height: 100px;
+  left: 150px;
+  position: absolute;
+  top: 100px;
+  width: 250px;
+  z-index: 9999;
+}
+</code></pre>
+<hr/>
+<ul>
+<li>List item one</li>
+<li>List item two<!-- -->
+<ul>
+<li>A nested item</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ol>
+<li>Number list item one
+1.1. A nested item</li>
+<li>Number list item two</li>
+<li>Number list item three</li>
+</ol>
+<hr/>
+<blockquote>
+<p>Quote</p>
+<p>Second line Quote</p>
+</blockquote>
+<hr/>
+<p>Standard link = http://ghost.org
+<a href="http://ghost.org">Custom Text Link</a></p>
+<p><img src="/posts/example.jpg" alt="이미지예시추가"/></p></div></main><div class="w-11/12 mt-20 sm:w-3/4"></div><footer class="w-full relative text-center text-stone-500"><p class="dark:text-white pt-10 pb-10">© 2022. Unsung. All rights reserved.</p></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"title":"Next js Blog 기본셋팅","date":"2022-03-10T00:00:00.000Z","description":"Next github blog setting","body":{"raw":"\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5\n\n###### Heading 6\n\n---\n\nParagraph\ntext `Inline Code` text\n~~Mistaken text.~~\n_Italics_\n**Bold**\n\n---\n\nTasks\n\n- [ ] a task list item\n- [ ] list syntax required\n- [ ] normal **formatting**\n- [ ] incomplete\n- [x] completed\n\n---\n\nCode Blocks\n\n    4 space indention\n    makes full-width\n    standard code blocks\n\n```js\nvar now = new Date();\n\nvar days = new Array(\n  \"Sunday\",\n  \"Monday\",\n  \"Tuesday\",\n  \"Wednesday\",\n  \"Thursday\",\n  \"Friday\",\n  \"Saturday\"\n);\n\nvar months = new Array(\n  \"January\",\n  \"February\",\n  \"March\",\n  \"April\",\n  \"May\",\n  \"June\",\n  \"July\",\n  \"August\",\n  \"September\",\n  \"October\",\n  \"November\",\n  \"December\"\n);\n\nvar date = (now.getDate() \u003c 10 ? \"0\" : \"\") + now.getDate();\n\nfunction fourdigits(number) {\n  return number \u003c 1000 ? number + 1900 : number;\n}\ntoday =\n  days[now.getDay()] +\n  \", \" +\n  months[now.getMonth()] +\n  \" \" +\n  date +\n  \", \" +\n  fourdigits(now.getYear());\n\ndocument.write(today);\n```\n\n```css\n#sc_drag_area {\n  height: 100px;\n  left: 150px;\n  position: absolute;\n  top: 100px;\n  width: 250px;\n  z-index: 9999;\n}\n```\n\n---\n\n- List item one\n- List item two\n  - A nested item\n\n---\n\n1. Number list item one\n   1.1. A nested item\n2. Number list item two\n3. Number list item three\n\n---\n\n\u003e Quote\n\u003e\n\u003e Second line Quote\n\n---\n\nStandard link = http://ghost.org\n[Custom Text Link](http://ghost.org)\n\n![이미지예시추가](/posts/example.jpg)\n","code":"var Component=(()=\u003e{var s=Object.create;var l=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var x=(t,n)=\u003e()=\u003e(n||t((n={exports:{}}).exports,n),n.exports),b=(t,n)=\u003e{for(var r in n)l(t,r,{get:n[r],enumerable:!0})},h=(t,n,r,d)=\u003e{if(n\u0026\u0026typeof n==\"object\"||typeof n==\"function\")for(let i of m(n))!p.call(t,i)\u0026\u0026i!==r\u0026\u0026l(t,i,{get:()=\u003en[i],enumerable:!(d=u(n,i))||d.enumerable});return t};var y=(t,n,r)=\u003e(r=t!=null?s(g(t)):{},h(n||!t||!t.__esModule?l(r,\"default\",{value:t,enumerable:!0}):r,t)),w=t=\u003eh(l({},\"__esModule\",{value:!0}),t);var o=x((M,a)=\u003e{a.exports=_jsx_runtime});var _={};b(_,{default:()=\u003ej,frontmatter:()=\u003ef});var e=y(o()),f={title:\"Next js Blog \\uAE30\\uBCF8\\uC14B\\uD305\",date:new Date(16468704e5),description:\"Next github blog setting\"};function c(t){let n=Object.assign({h1:\"h1\",h2:\"h2\",h3:\"h3\",h4:\"h4\",h5:\"h5\",h6:\"h6\",hr:\"hr\",p:\"p\",code:\"code\",em:\"em\",strong:\"strong\",ul:\"ul\",li:\"li\",pre:\"pre\",ol:\"ol\",blockquote:\"blockquote\",a:\"a\",img:\"img\"},t.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.h1,{children:\"Heading 1\"}),`\n`,(0,e.jsx)(n.h2,{children:\"Heading 2\"}),`\n`,(0,e.jsx)(n.h3,{children:\"Heading 3\"}),`\n`,(0,e.jsx)(n.h4,{children:\"Heading 4\"}),`\n`,(0,e.jsx)(n.h5,{children:\"Heading 5\"}),`\n`,(0,e.jsx)(n.h6,{children:\"Heading 6\"}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsxs)(n.p,{children:[`Paragraph\ntext `,(0,e.jsx)(n.code,{children:\"Inline Code\"}),` text\n~~Mistaken text.~~\n`,(0,e.jsx)(n.em,{children:\"Italics\"}),`\n`,(0,e.jsx)(n.strong,{children:\"Bold\"})]}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsx)(n.p,{children:\"Tasks\"}),`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsx)(n.li,{children:\"[ ] a task list item\"}),`\n`,(0,e.jsx)(n.li,{children:\"[ ] list syntax required\"}),`\n`,(0,e.jsxs)(n.li,{children:[\"[ ] normal \",(0,e.jsx)(n.strong,{children:\"formatting\"})]}),`\n`,(0,e.jsx)(n.li,{children:\"[ ] incomplete\"}),`\n`,(0,e.jsx)(n.li,{children:\"[x] completed\"}),`\n`]}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsx)(n.p,{children:\"Code Blocks\"}),`\n`,(0,e.jsx)(n.p,{children:`4 space indention\nmakes full-width\nstandard code blocks`}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsx)(n.code,{className:\"language-js\",children:`var now = new Date();\n\nvar days = new Array(\n  \"Sunday\",\n  \"Monday\",\n  \"Tuesday\",\n  \"Wednesday\",\n  \"Thursday\",\n  \"Friday\",\n  \"Saturday\"\n);\n\nvar months = new Array(\n  \"January\",\n  \"February\",\n  \"March\",\n  \"April\",\n  \"May\",\n  \"June\",\n  \"July\",\n  \"August\",\n  \"September\",\n  \"October\",\n  \"November\",\n  \"December\"\n);\n\nvar date = (now.getDate() \u003c 10 ? \"0\" : \"\") + now.getDate();\n\nfunction fourdigits(number) {\n  return number \u003c 1000 ? number + 1900 : number;\n}\ntoday =\n  days[now.getDay()] +\n  \", \" +\n  months[now.getMonth()] +\n  \" \" +\n  date +\n  \", \" +\n  fourdigits(now.getYear());\n\ndocument.write(today);\n`})}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsx)(n.code,{className:\"language-css\",children:`#sc_drag_area {\n  height: 100px;\n  left: 150px;\n  position: absolute;\n  top: 100px;\n  width: 250px;\n  z-index: 9999;\n}\n`})}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsx)(n.li,{children:\"List item one\"}),`\n`,(0,e.jsxs)(n.li,{children:[\"List item two\",`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsx)(n.li,{children:\"A nested item\"}),`\n`]}),`\n`]}),`\n`]}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsxs)(n.ol,{children:[`\n`,(0,e.jsx)(n.li,{children:`Number list item one\n1.1. A nested item`}),`\n`,(0,e.jsx)(n.li,{children:\"Number list item two\"}),`\n`,(0,e.jsx)(n.li,{children:\"Number list item three\"}),`\n`]}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsxs)(n.blockquote,{children:[`\n`,(0,e.jsx)(n.p,{children:\"Quote\"}),`\n`,(0,e.jsx)(n.p,{children:\"Second line Quote\"}),`\n`]}),`\n`,(0,e.jsx)(n.hr,{}),`\n`,(0,e.jsxs)(n.p,{children:[`Standard link = http://ghost.org\n`,(0,e.jsx)(n.a,{href:\"http://ghost.org\",children:\"Custom Text Link\"})]}),`\n`,(0,e.jsx)(n.p,{children:(0,e.jsx)(n.img,{src:\"/posts/example.jpg\",alt:\"\\uC774\\uBBF8\\uC9C0\\uC608\\uC2DC\\uCD94\\uAC00\"})})]})}function k(t={}){let{wrapper:n}=t.components||{};return n?(0,e.jsx)(n,Object.assign({},t,{children:(0,e.jsx)(c,t)})):c(t)}var j=k;return w(_);})();\n;return Component;"},"_id":"first.mdx","_raw":{"sourceFilePath":"first.mdx","sourceFileName":"first.mdx","sourceFileDir":".","contentType":"mdx","flattenedPath":"first"},"type":"Post"}},"__N_SSG":true},"page":"/blog/[slug]","query":{"slug":"first"},"buildId":"6mUgJyEhXQOh14c8myvlg","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
