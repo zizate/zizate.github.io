@@ -1,17 +1,21 @@
-import type { NextPage } from "next";
-import Container from "../components/Container";
-import Image from "next/image";
-import RecentPosts from "../components/RecentPosts";
-import metadata from "../data/metadata";
 import { allPosts } from "contentlayer/generated";
 import { InferGetStaticPropsType } from "next";
+import Image from "next/image";
+import Container from "../components/Container";
+import RecentPosts from "../components/RecentPosts";
+import metadata from "../data/metadata";
 
 const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const myLoader = () => {
+    return `https://picsum.photos/700/700`;
+  };
+
   return (
     <Container>
       <div className={`my-5 w-full`}>
         <div className={`relative`}>
           <Image
+            loader={myLoader}
             src={`/home.jpg`}
             alt="대표 이미지"
             width={`100%`}
